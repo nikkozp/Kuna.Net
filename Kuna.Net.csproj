@@ -3,16 +3,12 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
+	<LangVersion>10.0</LangVersion>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="CryptoExchange.Net" Version="5.2.3" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Converts\" />
-    <Folder Include="Enums\" />
   </ItemGroup>
 
 </Project>

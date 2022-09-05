@@ -50,7 +50,7 @@ namespace Kuna.Net.Clients.SpotApi
             ExchangeData = new KunaClientSpotApiExchangeData(this);
             Trading = new KunaClientSpotApiTrading(this);
 
-            requestBodyFormat = RequestBodyFormat.FormData;
+            requestBodyFormat = RequestBodyFormat.Json;
         }
 
         #endregion

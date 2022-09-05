@@ -10,6 +10,7 @@ namespace Kuna.Net.Objects
     {
         public string RestClientAddress { get; set; } = "";
 
+
         public static KunaApiAddresses Default = new KunaApiAddresses
         {
             RestClientAddress = "https://api.kuna.io",

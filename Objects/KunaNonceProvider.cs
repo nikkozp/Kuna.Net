@@ -17,7 +17,7 @@ namespace Kuna.Net.Objects
         {
             lock (nonceLock)
             {
-                var nonce = DateTime.UtcNow.Ticks;
+                var nonce = (Int64)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalMilliseconds;
                 if (lastNonce.HasValue && nonce <= lastNonce.Value)
                     nonce = lastNonce.Value + 1;
                 lastNonce = nonce;

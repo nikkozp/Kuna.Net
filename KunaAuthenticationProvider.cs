@@ -39,7 +39,7 @@ namespace Kuna.Net
 
             string path = uri.PathAndQuery.ToString();
 
-            string signature = BytesToHexString(_encryptor384.ComputeHash(Encoding.UTF8.GetBytes($"{path}{headers["Kun-Nonce"]}{JsonConvert.SerializeObject(parameters)}"))).ToLower();
+            string signature = BytesToHexString(_encryptor384.ComputeHash(Encoding.UTF8.GetBytes($"{path}{nonce}{JsonConvert.SerializeObject(parameters)}"))).ToLower();
 
             headers.Add("Kun-Signature", signature);
         }

@@ -1,4 +1,5 @@
 ﻿using CryptoExchange.Net.Converters;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,8 @@ using System.Threading.Tasks;
 
 namespace Kuna.Net.Objects.Models
 {
-    public class KunaBalance
+    [JsonConverter(typeof(ArrayConverter))]
+    public class KunaAssetBalance
     {
         [ArrayProperty(1)]
         public string Asset { get; set; }

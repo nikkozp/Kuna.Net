@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Kuna.Net.Objects.Models
 {
-    public class KunaExchangeInfo
+    public class KunaCancelMultipleOrder
     {
+        public string Result { get; set; }
     }
 }
